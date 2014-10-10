@@ -1,3 +1,4 @@
+par(bg="transparent")
 data<-read.table("household_power_consumption.txt",header=TRUE, sep=";", na.strings="?", colClasses=c("factor","factor","numeric","numeric","numeric","numeric","numeric","numeric","numeric"),nrows=400000)
 datasub <- rbind(subset(data, data$Date=="1/2/2007"),subset(data, data$Date=="2/2/2007"))
 hist(datasub$Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)")

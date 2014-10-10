@@ -4,7 +4,7 @@ datasub$Date <- as.Date(datasub$Date,format="%d/%m/%Y")
 dateandtime <- strptime(paste(datasub$Date,datasub$Time),format="%Y-%m-%d %H:%M:%S")
 
 
-par(mar=c(2,4,2,2), mfrow=c(2,2))
+par(mar=c(2,4,2,2), mfrow=c(2,2),bg="transparent")
 plot(dateandtime, datasub$Global_active_power, type="l", ylab="Global Active Power",xlab="")
 plot(dateandtime,datasub$Voltage,type="l",ylab="Voltage")
 with(datasub,{
